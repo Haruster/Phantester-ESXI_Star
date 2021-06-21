@@ -6,5 +6,9 @@ from vmware.vapi.vsphere.client import create_vsphere_client
 
 session = request.session
 
+session.verify = False
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+vsphere_client = create_vsphere_client
 
