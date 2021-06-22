@@ -4,7 +4,7 @@ from vmware.vapi.vsphere.client import create_vsphere_client
 
 # Connect My VM Server
 
-session = request.session
+session = requests.session
 
 session.verify = False
 
