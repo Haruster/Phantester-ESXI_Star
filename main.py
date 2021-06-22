@@ -10,5 +10,6 @@ session.verify = False
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-vsphere_client = create_vsphere_client
+vsphere_client = create_vsphere_client(server_ip = '<ip-address>', username = '<username>', password = '<user_password>', session = session)
 
+vsphere_client.vcenter.VM.list()
